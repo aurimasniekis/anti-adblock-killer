@@ -4471,7 +4471,8 @@
                       (function () {
                         function onVjsReady() {
                           if (typeof window.videojs !== 'function') {
-                            onVjsReady();
+                            setTimeout(function() {
+                            onVjsReady(); }, 500);
                           } else {
                             window.videojs("noAdPlayer").src(/_SOURCES_/);
                           }
